@@ -1,0 +1,149 @@
+/*global*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+:root{
+    --natgeocolor:#ffcc00;
+}
+html{
+    font-size: 62.5%;/*1rem = 10 px*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:"Roboto",sans-serif;
+    background-color: black;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*utilities*/
+
+/*menu*/
+nav.menu{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 36px;
+    padding: 5px 10px 0 20px;
+}
+
+nav.menu img.big-logo{
+    height: 30px;
+    display: none;
+}
+nav.menu img.small-logo{
+    height: 30px;
+    display: block;
+}
+
+nav.menu a{
+  
+    margin-right: 30px;
+}
+
+
+a.login{
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+    
+a.sub{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: black;
+    padding: 16px;
+    letter-spacing: 3px;
+    color: white;
+    box-shadow: inset 0 0 0 0 #ffcc00;
+    transition: ease-in-out .8s;
+}
+
+a.sub:hover{
+    box-shadow: inset 300px 0 0 0 #ffcc00;
+    color: black;
+}
+
+a.arrows{
+    color: black;
+}
+
+a.search,a.renew,a.menu{
+    display: none;
+}
+
+/*header*/
+header{
+    text-align: center;
+    color: white;
+    margin: 50px;
+    font-size: 25px;
+}
+
+header p{
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.box{
+    margin: auto;
+    width: 65px;
+    border-bottom: 5px solid var(--natgeocolor);
+}
+
+header p span{
+    border-bottom: 2px solid var(--natgeocolor);
+}
+
+.header-title{
+    text-transform: uppercase;
+    letter-spacing:  3px;
+    margin-top:5%;
+    margin-bottom:2%;
+    font-size: 2.5rem;
+}
+.header-container p{
+    margin-bottom: 15%;
+    font-weight: 400;
+}
+
+.header-container p::after{
+    content: "";
+    background-color: #ffcc00;
+    position:absolute;
+    width: 2rem;
+    height:.2rem;
+    transform: translate(-1.5em,1em);
+}
+
+.header-content span::after{
+    transform-origin: top;
+    position: absolute;
+    background-color: #ffcc00;
+    content: '';
+    width:4.7rem;
+    height: .1rem; 
+    transform: translate(-4.5em,1.3em) rotate(180deg);
+    z-index: -10;
+}
+
+.header-content span:hover{
+    color: black;
+}
+
+.header-content span:hover::after{
+	animation: slide-top .3s  both ;
+
+}
